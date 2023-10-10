@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "482608676613",
+    "project_id": "so-like-base-project",
+    "storage_bucket": "so-like-base-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:482608676613:android:8ba7968927968145b3816c",
+        "android_client_info": {
+          "package_name": "app.solike.beta"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnLe5wpPf_4bs6mkbPuVlkSHFyHqZbhYo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:482608676613:android:332d86dd715569a8b3816c",
+        "android_client_info": {
+          "package_name": "app.solike.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnLe5wpPf_4bs6mkbPuVlkSHFyHqZbhYo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
