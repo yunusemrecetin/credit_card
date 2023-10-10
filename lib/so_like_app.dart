@@ -80,3 +80,5 @@ export 'package:lucide_icons/lucide_icons.dart';
 export 'package:base_project/core/core.dart';
 
 export 'package:provider/provider.dart';
+export 'package:auto_route/auto_route.dart';
+export 'package:base_project/core/route/app_router.gr.dart';

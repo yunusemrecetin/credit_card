@@ -2,6 +2,21 @@
 
 Base Project with the aim of making processes like rapid application development and maintenance easier, shortening application processes, and automating them.
 
+
+## Mason Packages of Base Project
+
+### Create a New Feature
+
+```
+mason make create_feature
+```
+
+### Create a New Page
+
+```
+mason make create_page
+```
+
 ## File and Project Structure of So Like App Base Project
 
 Main structure of base project
@@ -55,3 +70,10 @@ Think of the feature folder as a bundle. Why do we need all the files from the r
 - Shorebird Module []
 - Auth Module []
 - Firebase Module [/] (Staging level integration completed)
+- Mason [/]
+  - Create [/]
+    - Page [X]
+    - Feature [X]
+    - Network []
+    - Presentation []
+
