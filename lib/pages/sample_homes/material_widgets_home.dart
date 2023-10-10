@@ -2,34 +2,7 @@
 * File : Material Widget Home Page
 * Version : 1.0.0
 * */
-import 'package:base_project/pages/sample_homes/single_grid_item.dart';
-import 'package:flutkit/helpers/theme/app_notifier.dart';
-import 'package:flutkit/helpers/theme/app_theme.dart';
-import 'package:flutkit/helpers/widgets/my_container.dart';
-import 'package:flutkit/helpers/widgets/my_spacing.dart';
-import 'package:flutkit/helpers/widgets/my_text.dart';
-import 'package:flutkit/images.dart';
-import 'package:flutkit/widgets/material/advanced/advanced_screen.dart';
-import 'package:flutkit/widgets/material/appbar/appbar_widget.dart';
-import 'package:flutkit/widgets/material/appbar/search_bar_widget.dart';
-import 'package:flutkit/widgets/material/appbar/sliver_app_bar_widget.dart';
-import 'package:flutkit/widgets/material/basic/basic_screen.dart';
-import 'package:flutkit/widgets/material/bottomsheet/bottom_sheets_screen.dart';
-import 'package:flutkit/widgets/material/button/buttons_screen.dart';
-import 'package:flutkit/widgets/material/card/cards_screen.dart';
-import 'package:flutkit/widgets/material/carousel/carousels_screen.dart';
-import 'package:flutkit/widgets/material/dialog/dialogs_screen.dart';
-import 'package:flutkit/widgets/material/expansion/expansions_screen.dart';
-import 'package:flutkit/widgets/material/input/inputs_screen.dart';
-import 'package:flutkit/widgets/material/list/lists_screen.dart';
-import 'package:flutkit/widgets/material/navigation/bottom_navigation_widget.dart';
-import 'package:flutkit/widgets/material/navigation/custom_bottom_navigation_widget.dart';
-import 'package:flutkit/widgets/material/navigation/flutx_bottom_navigation_screen.dart';
-import 'package:flutkit/widgets/material/navigation/navigation_drawer.dart';
-import 'package:flutkit/widgets/material/navigation/navigation_rail_widget.dart';
-import 'package:flutkit/widgets/material/navigation/top_navigation_widget.dart';
-import 'package:flutkit/widgets/material/navigation/top_scrollable_navigation_widget.dart';
-import 'package:flutkit/widgets/material/progress/progresses_screen.dart';
+import 'package:base_project/so_like_app.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

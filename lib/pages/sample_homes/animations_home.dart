@@ -1,14 +1,6 @@
 import 'package:base_project/pages/sample_homes/single_grid_item.dart';
-import 'package:flutkit/animations/auth/login_screen.dart';
-import 'package:flutkit/animations/favorite/favorite_screen.dart';
-import 'package:flutkit/animations/flip/flip_screen.dart';
-import 'package:flutkit/animations/radial_menu/radial_menu_screen.dart';
-import 'package:flutkit/animations/resizing_house/resizing_house_screen.dart';
-import 'package:flutkit/animations/switch/switch_screen.dart';
-import 'package:flutkit/animations/theme_changer/theme_changer_screen.dart';
-import 'package:flutkit/helpers/theme/app_notifier.dart';
-import 'package:flutkit/helpers/theme/app_theme.dart';
-import 'package:flutkit/helpers/widgets/my_spacing.dart';
+import 'package:base_project/so_like_app.dart';
+
 import 'package:flutter/material.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 import 'package:provider/provider.dart';

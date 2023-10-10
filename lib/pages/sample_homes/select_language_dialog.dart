@@ -1,7 +1,4 @@
-import 'package:flutkit/helpers/localizations/language.dart';
-import 'package:flutkit/helpers/theme/app_notifier.dart';
-import 'package:flutkit/helpers/theme/app_theme.dart';
-import 'package:flutkit/helpers/widgets/my_text.dart';
+import 'package:base_project/so_like_app.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

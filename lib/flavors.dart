@@ -21,4 +21,17 @@ class F {
         return 'title';
     }
   }
+
+  static String getEnv() {
+    switch (appFlavor) {
+      case Flavor.dev:
+        return '.env_dev';
+      case Flavor.beta:
+        return '.env_beta';
+      case Flavor.prod:
+        return '.env_prod';
+      default:
+        return '.env_dev';
+    }
+  }
 }

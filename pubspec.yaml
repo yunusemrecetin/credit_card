@@ -32,6 +32,8 @@ dependencies:
   upgrader: ^8.1.0
   flutkit:
     path: ./packages/so-like-ui-kit
+  dio: ^5.3.3
+  flutter_dotenv: ^5.1.0
 
 dev_dependencies:
   flutter_test:
@@ -52,6 +54,9 @@ flutter:
 
     # Map Styles
     - assets/map/
+
+    # ENV
+    - .env
 
     # Profiles
     - assets/images/profile/

@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:base_project/core/service/app_service.dart';
 import 'package:base_project/flavors.dart';
 import 'package:flutter/material.dart';
 import 'app.dart';
@@ -13,6 +14,7 @@ Future<void> main() async {
   //You will need to initialize AppThemeNotifier class for theme changes.
   WidgetsFlutterBinding.ensureInitialized();
   // MobileAds.instance.initialize();
+  await AppService.initAsync();
   AppTheme.init();
 
   await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
