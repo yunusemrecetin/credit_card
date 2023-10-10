@@ -56,6 +56,8 @@ flutter:
     - assets/map/
 
     # ENV
+    - .env_dev
+    - .env_beta
     - .env
 
     # Profiles
