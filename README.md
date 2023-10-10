@@ -40,7 +40,7 @@ Think of the feature folder as a bundle. Why do we need all the files from the r
 
 #### TO-DO
 
-- Staging []
+- Staging [X]
   - Test [X]
   - Beta [X]
   - Prod [X]
