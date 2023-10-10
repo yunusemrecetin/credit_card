@@ -1,15 +1,9 @@
 import 'package:base_project/pages/sample_homes/homes_screen.dart';
-import 'package:flutkit/helpers/theme/app_notifier.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutkit/helpers/localizations/app_localization_delegate.dart';
-import 'package:flutkit/helpers/localizations/language.dart';
-import 'package:flutkit/helpers/theme/app_theme.dart';
+import 'package:base_project/so_like_app.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:get/get.dart';
-import 'package:provider/provider.dart';
-
-import 'flavors.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
@@ -18,7 +12,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer<AppNotifier>(
       builder: (BuildContext context, AppNotifier value, Widget? child) {
-        return GetMaterialApp(
+        return MaterialApp(
           debugShowCheckedModeBanner: false,
           title: F.title,
           theme: AppTheme.theme,
@@ -34,7 +28,6 @@ class App extends StatelessWidget {
           },
           localizationsDelegates: [
             AppLocalizationsDelegate(context),
-            // Add this line
             GlobalMaterialLocalizations.delegate,
             GlobalWidgetsLocalizations.delegate,
             GlobalCupertinoLocalizations.delegate,

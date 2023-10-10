@@ -1,12 +1,8 @@
 import 'dart:async';
-import 'package:base_project/core/service/app_service.dart';
-import 'package:base_project/flavors.dart';
 import 'package:flutter/material.dart';
 import 'app.dart';
-import 'package:flutkit/helpers/theme/app_notifier.dart';
-import 'package:flutkit/helpers/theme/app_theme.dart';
 import 'package:flutter/services.dart';
-import 'package:provider/provider.dart';
+import 'package:base_project/so_like_app.dart';
 
 Future<void> main() async {
   F.appFlavor = Flavor.dev;

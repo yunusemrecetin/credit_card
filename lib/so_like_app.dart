@@ -76,3 +76,7 @@ export 'package:flutkit/helpers/localizations/language.dart';
 export 'package:flashy_tab_bar2/flashy_tab_bar2.dart';
 
 export 'package:lucide_icons/lucide_icons.dart';
+
+export 'package:base_project/core/core.dart';
+
+export 'package:provider/provider.dart';

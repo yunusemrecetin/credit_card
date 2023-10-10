@@ -3,12 +3,10 @@ description: So Like App Base Project
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
-
 version: 1.0.0+1
 
 environment:
   sdk: '>=3.0.5 <4.0.0'
-
 
 dependencies:
   flutter:
@@ -44,14 +42,10 @@ dev_dependencies:
   freezed: ^2.4.2
   json_serializable: ^6.7.1
 
-
-
 flutter:
-
   uses-material-design: true
 
   assets:
-
     # Map Styles
     - assets/map/
 
@@ -131,7 +125,6 @@ flutter:
     - assets/images/full_apps/nft/images/
     - assets/images/full_apps/nft/icons/
 
-
     ## m3
 
     # Cookify
@@ -153,8 +146,6 @@ flutter:
     - assets/images/full_apps/plant/images/
     - assets/full_apps/animations/plant/data/
 
-
-
     ## Other
 
     # Dating
@@ -170,12 +161,10 @@ flutter:
     # Muvi
     - assets/full_apps/others/muvi/data/
 
-
     ###################---------------------- Custom Apps -------------------------#################
 
     # Grocery
     - assets/images/apps/grocery/
-
 
     # Homemade
     - assets/images/apps/homemade/
@@ -257,42 +246,42 @@ analyzer:
 flavorizr:
   app:
     android:
-      flavorDimensions: "default"
+      flavorDimensions: 'default'
 
   flavors:
     dev:
       app:
-        name: "Dev So Like App"
-        icon: "public/assets/app_icon/icon.png"
+        name: 'Dev So Like App'
+        icon: 'public/assets/app_icon/icon.png'
       android:
-        applicationId: "app.solike.dev"
+        applicationId: 'app.solike.dev'
         firebase:
-          config: ".firebase/dev/google-services.json"
+          config: '.firebase/dev/google-services.json'
       ios:
-        bundleId: "app.solike.dev"
+        bundleId: 'app.solike.dev'
         firebase:
-          config: ".firebase/dev/GoogleService-Info.plist"
+          config: '.firebase/dev/GoogleService-Info.plist'
     beta:
       app:
-        name: "Beta So Like App"
-        icon: "public/assets/app_icon/icon.png"
+        name: 'Beta So Like App'
+        icon: 'public/assets/app_icon/icon.png'
       android:
-        applicationId: "app.solike.beta"
+        applicationId: 'app.solike.beta'
         firebase:
-          config: ".firebase/beta/google-services.json"
+          config: '.firebase/beta/google-services.json'
       ios:
-        bundleId: "app.solike.beta"
+        bundleId: 'app.solike.beta'
         firebase:
-          config: ".firebase/beta/GoogleService-Info.plist"
+          config: '.firebase/beta/GoogleService-Info.plist'
     prod:
       app:
-        name: "So Like App"
-        icon: "public/assets/app_icon/icon.png"
+        name: 'So Like App'
+        icon: 'public/assets/app_icon/icon.png'
       android:
-        applicationId: "app.solike"
+        applicationId: 'app.solike'
         firebase:
-          config: ".firebase/prod/google-services.json"
+          config: '.firebase/prod/google-services.json'
       ios:
-        bundleId: "app.solike"
+        bundleId: 'app.solike'
         firebase:
-          config: ".firebase/prod/GoogleService-Info.plist"
+          config: '.firebase/prod/GoogleService-Info.plist'
