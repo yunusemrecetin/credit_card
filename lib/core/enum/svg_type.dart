@@ -1,0 +1,4 @@
+enum SVGType {
+  asset,
+  network,
+}

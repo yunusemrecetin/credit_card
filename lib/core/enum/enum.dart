@@ -1,0 +1,1 @@
+export 'package:base_project/core/enum/svg_type.dart';
