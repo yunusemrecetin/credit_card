@@ -41,17 +41,17 @@ Think of the feature folder as a bundle. Why do we need all the files from the r
 #### TO-DO
 
 - Staging []
-  - Test []
-  - Beta []
-  - Prod []
+  - Test [X]
+  - Beta [X]
+  - Prod [X]
 - CLI []
   - Create a feature []
   - Create a repository []
   - Create a UI (Page, some widget etc..) []
   - Create a database (Secure or local) []
   - Package name changer []
-- FlutKit Integration []
+- FlutKit Integration [X]
 - Local Notification Integration (Code base and use case etc..) []
 - Shorebird Module []
 - Auth Module []
-- Firebase Module []
+- Firebase Module [/] (Staging level integration completed)
