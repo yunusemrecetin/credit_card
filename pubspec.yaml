@@ -1,7 +1,7 @@
 name: base_project
 description: So Like App Base Project
 
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: 'none'
 
 version: 1.0.0+1
 
@@ -12,201 +12,40 @@ dependencies:
   flutter:
     sdk: flutter
 
-  cupertino_icons: ^1.0.2
-  auto_route: ^7.8.3
-  auto_route_generator: ^7.3.1
-  hive: ^2.2.3
-  riverpod: ^2.4.0
-  flutter_riverpod: ^2.4.0
-  hooks_riverpod: ^2.4.0
-  flutter_flavorizr: ^2.2.1
-  in_app_review: ^2.0.6
-  flutter_svg: ^2.0.7
-  freezed_annotation: ^2.4.1
-  json_annotation: ^4.8.1
-  flutter_local_notifications: ^15.1.1
-  easy_localization: ^3.0.3
-  flutter_native_splash: ^2.3.2
-  upgrader: ^8.1.0
-  flutkit:
-    path: ./packages/so-like-ui-kit
-  dio: ^5.3.3
-  flutter_dotenv: ^5.1.0
+  cupertino_icons: 1.0.6
+  auto_route: 8.0.0
+  auto_route_generator: 8.0.0
+  hive: 2.2.3
+  riverpod: 2.5.1
+  flutter_riverpod: 2.5.1
+  hooks_riverpod: 2.5.1
+  flutter_flavorizr: 2.2.2
+  in_app_review: 2.0.9
+  flutter_svg: 2.0.10+1
+  freezed_annotation: 2.4.1
+  json_annotation: 4.8.1
+  flutter_local_notifications: 17.0.0
+  easy_localization: 3.0.5
+  flutter_native_splash: 2.4.0
+  upgrader: 10.0.1
+  dio: 5.4.1
+  flutter_dotenv: 5.1.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_lints: ^2.0.0
-  build_runner: ^2.4.6
-  freezed: ^2.4.2
-  json_serializable: ^6.7.1
+  flutter_lints: 3.0.1
+  build_runner: 2.4.8
+  freezed: 2.4.7
+  json_serializable: 6.7.1
 
 flutter:
   uses-material-design: true
 
   assets:
-    # Map Styles
-    - assets/map/
-
-    # ENV
-    - .env_dev
-    - .env_beta
-    - .env
-
-    # Profiles
-    - assets/images/profile/
-
-    # Shopping
-    - assets/images/apps/shopping/
-    - assets/images/apps/shopping/product/
-    - assets/images/apps/shopping/offer/
-    - assets/images/apps/shopping/camera/
-    - assets/images/apps/shopping/vector/
-
-    # Shopping2
-    - assets/images/apps/shopping2/icons/
-    - assets/images/apps/shopping2/images/
-
-    # Brand
-    - assets/brand/
-
-    # Hotel
-    - assets/images/apps/hotel/
-
-    # Places
-    - assets/images/place/
-
-    # Music
-    - assets/images/apps/music/
-
-    # Food
-    - assets/images/apps/food/
-
-    # Estate
-    - assets/images/apps/estate/
-
-    # Course
-    - assets/images/apps/course/
-
-    # Chat
-    - assets/images/apps/chat/
-
-    # Social
-    - assets/images/apps/social/
-
-    # Other
-    - assets/images/all/
-
-    # Event
-    - assets/images/apps/event/
-
-    # Avatars
-    - assets/images/profile/
-
-    ###################---------------------- Full Apps -------------------------#################
-
-    ## Animations
-
-    # Shopping
-    # Shopping Manager
-    - assets/full_apps/animations/shopping/data/
-    - assets/images/full_apps/shopping/
-    - assets/images/full_apps/shopping/icons/
-    - assets/full_apps/animations/shopping_manager/data/
-
-    # Rental Service
-    - assets/full_apps/animations/rental_service/data/
-    - assets/images/full_apps/rental_service/images/
-    - assets/images/full_apps/rental_service/icons/
-
-    # NFT
-    - assets/full_apps/animations/nft/data/
-    - assets/images/full_apps/nft/images/
-    - assets/images/full_apps/nft/icons/
-
-    ## m3
-
-    # Cookify
-    - assets/full_apps/m3/cookify/data/
-
-    # Dating
-    - assets/full_apps/m3/dating/data/
-
-    # Estate
-    - assets/full_apps/m3/estate/data/
-
-    # HomeMade
-    - assets/full_apps/m3/homemade/data/
-
-    # Learning
-    - assets/full_apps/m3/learning/data/
-
-    # Plant
-    - assets/images/full_apps/plant/images/
-    - assets/full_apps/animations/plant/data/
-
-    ## Other
-
-    # Dating
-    - assets/full_apps/others/dating/data/
-
-    # Fitness
-    - assets/images/apps/fitness/images/
-    - assets/full_apps/others/fitness/data/
-
-    # HomeMade
-    - assets/full_apps/others/homemade/data/
-
-    # Muvi
-    - assets/full_apps/others/muvi/data/
-
-    ###################---------------------- Custom Apps -------------------------#################
-
-    # Grocery
-    - assets/images/apps/grocery/
-
-    # Homemade
-    - assets/images/apps/homemade/
-    - assets/images/apps/homemade/products/
-    - assets/images/apps/homemade/category/
-    - assets/images/apps/homemade/shop/
-
-    # Dating
-    - assets/images/apps/dating/
-
-    # Muvi
-    - assets/images/apps/muvi/
-
-    # CustomApps
-    - assets/images/apps/cookify/
-    - assets/images/apps/grocery/
-    - assets/images/apps/medicare/
-
-    # Learning  (Material Design 3)
-    - assets/images/apps/learning/images/
-    - assets/images/apps/learning/icons/
-
-    # Illustration
-    - assets/illustration/food/
-    - assets/illustration/shopping/
-    - assets/illustration/hotel/
-    - assets/illustration/music/
-
-    # Month backgrounds
-    - assets/images/month_background/
-
     # Languages
     - assets/lang/
-
-    # Icons
-    - assets/icons/
-
-    # Rive Animations
-    - assets/animations/rive/
-
-    # Other
-    - assets/other/
 
   # To add assets to your application, add an assets section, like this:
   # assets:
