@@ -12,12 +12,8 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   // MobileAds.instance.initialize();
   await AppService.initAsync();
-  AppTheme.init();
 
   await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 
-  runApp(ChangeNotifierProvider<AppNotifier>(
-    create: (context) => AppNotifier(),
-    child: const App(),
-  ));
+  runApp(const App());
 }
