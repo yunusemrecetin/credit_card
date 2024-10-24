@@ -1,8 +1,6 @@
 export 'package:base_project/flavors.dart';
 export 'package:flutter_dotenv/flutter_dotenv.dart';
 
-export 'package:base_project/pages/sample_homes/animations_home.dart';
-
 export 'package:base_project/core/core.dart';
 
 export 'package:auto_route/auto_route.dart';
