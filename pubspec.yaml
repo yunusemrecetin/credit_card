@@ -13,33 +13,33 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.8
-  auto_route: ^9.2.2
-  auto_route_generator: ^9.0.0
+  auto_route: ^10.0.1
+  auto_route_generator: ^10.0.1
   hive: 2.2.3
   riverpod: ^2.6.1
   flutter_riverpod: ^2.6.1
   hooks_riverpod: ^2.6.1
-  flutter_flavorizr: ^2.2.3
+  flutter_flavorizr: ^2.4.0
   in_app_review: 2.0.10
-  flutter_svg: 2.0.16
-  freezed_annotation: ^2.4.4
+  flutter_svg: 2.1.0
+  freezed_annotation: ^3.0.0
   json_annotation: ^4.9.0
-  flutter_local_notifications: ^18.0.1
+  flutter_local_notifications: ^19.1.0
   easy_localization: ^3.0.7
-  flutter_native_splash: ^2.4.3
-  upgrader: ^11.3.1
-  dio: ^5.7.0
+  flutter_native_splash: ^2.4.6
+  upgrader: ^11.3.2
+  dio: ^5.8.0+1
   flutter_dotenv: ^5.2.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  analyzer: ^6.5.0
+  analyzer: ^7.4.5
   flutter_lints: ^5.0.0
-  build_runner: ^2.4.13
-  freezed: ^2.5.7
-  json_serializable: ^6.9.0
+  build_runner: ^2.4.15
+  freezed: ^3.0.6
+  json_serializable: ^6.9.5
 
 flutter:
   uses-material-design: true
