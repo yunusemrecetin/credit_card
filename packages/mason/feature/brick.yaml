@@ -1,4 +1,4 @@
-name: create_page
+name: feature
 description: A new brick created with the Mason CLI.
 
 # The following defines the brick repository url.
@@ -13,7 +13,7 @@ version: 0.1.0+1
 # The following defines the environment for the current brick.
 # It includes the version of mason that the brick requires.
 environment:
-  mason: ">=0.1.0-dev.51 <0.1.0"
+  mason: ">=0.1.0 <0.1.1"
 
 # Variables specify dynamic values that your brick depends on.
 # Zero or more variables can be specified for a given brick.
@@ -26,13 +26,8 @@ environment:
 #  * a list of values (enums only)
 #  * an optional separator (list only)
 vars:
-  feature:
-    type: string
-    description: Name of feature
-    default: Base
-    prompt: What your feature name?
   name:
     type: string
-    description: Name of page
-    default: Base
-    prompt: What your page name?
+    description: Your feature name
+    default: base
+    prompt: What the name of feature?

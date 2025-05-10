@@ -2,10 +2,10 @@
 # Run "mason get" to install all registered bricks.
 # To learn more, visit https://docs.brickhub.dev.
 bricks:
-  create_feature:
-    path: ./packages/mason/create_feature
-  create_page:
-    path: ./packages/mason/create_page
+  feature:
+    path: ./packages/mason/feature
+  page:
+    path: ./packages/mason/page
   # Bricks can be imported via version constraint from a registry.
   # Uncomment the following line to import the "hello" brick from BrickHub.
   # hello: 0.1.0+1
