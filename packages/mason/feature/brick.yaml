@@ -28,6 +28,6 @@ environment:
 vars:
   name:
     type: string
-    description: Your feature name
+    description: Please enter the feature name
     default: base
     prompt: What the name of feature?
