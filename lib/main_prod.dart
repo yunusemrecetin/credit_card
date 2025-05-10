@@ -10,6 +10,7 @@ Future<void> main() async {
 
   //You will need to initialize AppThemeNotifier class for theme changes.
   WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
   // MobileAds.instance.initialize();
   await AppService.initAsync();
 
