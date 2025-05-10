@@ -25,12 +25,14 @@ dependencies:
   freezed_annotation: ^3.0.0
   json_annotation: ^4.9.0
   flutter_local_notifications: ^19.1.0
-  easy_localization: ^3.0.7
+  easy_localization: ^3.0.7+1
   flutter_native_splash: ^2.4.6
   upgrader: ^11.3.2
   dio: ^5.8.0+1
   flutter_dotenv: ^5.2.1
   wolt_modal_sheet: ^0.11.0
+  pretty_dio_logger: ^1.4.0
+  logger: ^2.5.0
 
 dev_dependencies:
   flutter_test:
@@ -48,6 +50,10 @@ flutter:
   assets:
     # Languages
     - assets/lang/
+    - .env
+    - .env_dev
+    - .env_beta
+    - .env_prod
 
   # To add assets to your application, add an assets section, like this:
   # assets:

@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:base_project/so_like_app.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'app.dart';
 import 'package:flutter/services.dart';
@@ -12,5 +13,14 @@ Future<void> main() async {
 
   await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 
-  runApp(const App());
+  runApp(
+    EasyLocalization(
+      supportedLocales: [
+        Locale('en'),
+      ],
+      path: 'assets/lang',
+      fallbackLocale: Locale('en'),
+      child: App(),
+    ),
+  );
 }
