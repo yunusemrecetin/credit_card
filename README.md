@@ -8,13 +8,13 @@ Base Project with the aim of making processes like rapid application development
 ### Create a New Feature
 
 ```
-mason make create_feature
+mason make feature
 ```
 
 ### Create a New Page
 
 ```
-mason make create_page
+mason make page
 ```
 
 ## File and Project Structure of So Like App Base Project
@@ -60,9 +60,9 @@ Think of the feature folder as a bundle. Why do we need all the files from the r
   - Beta [X]
   - Prod [X]
 - CLI []
-  - Create a feature []
-  - Create a repository []
-  - Create a UI (Page, some widget etc..) []
+  - Create a feature [X]
+  - Create a repository [X]
+  - Create a UI (Page, some widget etc..) [/]
   - Create a database (Secure or local) []
   - Package name changer []
 - FlutKit Integration [X]
