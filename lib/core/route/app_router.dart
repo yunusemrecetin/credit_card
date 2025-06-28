@@ -6,7 +6,9 @@ class AppRouter extends RootStackRouter {
   RouteType get defaultRouteType => RouteType.material();
 
   @override
-  List<AutoRoute> get routes => [];
+  List<AutoRoute> get routes => [
+        AutoRoute(page: TestPage.page, initial: true),
+      ];
 
   @override
   List<AutoRouteGuard> get guards => [];

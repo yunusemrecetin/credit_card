@@ -3,11 +3,11 @@
 # To learn more, visit https://docs.brickhub.dev.
 bricks:
   feature:
-    path: ./packages/mason/feature
+    path: ./.packages/mason/feature
   page:
-    path: ./packages/mason/page
+    path: ./.packages/mason/page
   adapty:
-    path: ./packages/mason/adapty
+    path: ./.packages/mason/adapty
   # Bricks can be imported via version constraint from a registry.
   # Uncomment the following line to import the "hello" brick from BrickHub.
   # hello: 0.1.0+1
