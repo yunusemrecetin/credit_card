@@ -16,7 +16,7 @@ import 'package:base_project/features/test/ui/pages/test_page.dart' as _i1;
 /// [_i1.TestPage]
 class TestPage extends _i2.PageRouteInfo<void> {
   const TestPage({List<_i2.PageRouteInfo>? children})
-    : super(TestPage.name, initialChildren: children);
+      : super(TestPage.name, initialChildren: children);
 
   static const String name = 'TestPage';
 
