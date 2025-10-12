@@ -13,6 +13,7 @@ class WalletPage extends StatefulWidget {
 
 class _WalletPageState extends State<WalletPage> {
   int _selectedIndex = 0;
+  List<Map<String, dynamic>> _filteredCards = [];
 
   // Card data matching the image exactly
   List<Map<String, dynamic>> walletCards = [
@@ -200,6 +201,12 @@ class _WalletPageState extends State<WalletPage> {
     );
   }
 
+  @override
+  void initState() {
+    super.initState();
+    _filteredCards = List.from(walletCards);
+  }
+
   void _onAddCard() {
     // Show add card bottom sheet
     showModalBottomSheet(
@@ -211,15 +218,39 @@ class _WalletPageState extends State<WalletPage> {
     );
   }
 
+  void _onSearchChanged(String query) {
+    setState(() {
+      if (query.isEmpty) {
+        _filteredCards = List.from(walletCards);
+      } else {
+        _filteredCards = walletCards.where((card) {
+          final bankName = (card['bankName'] ?? '').toLowerCase();
+          final cardType = (card['cardType'] ?? '').toLowerCase();
+          final content = (card['content'] ?? '').toLowerCase();
+          final searchLower = query.toLowerCase();
+          
+          return bankName.contains(searchLower) ||
+                 cardType.contains(searchLower) ||
+                 content.contains(searchLower) ||
+                 'credit card'.contains(searchLower) ||
+                 'debit card'.contains(searchLower) ||
+                 'virtual'.contains(searchLower) ||
+                 'physical'.contains(searchLower);
+        }).toList();
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return WalletPageTemplate(
       selectedIndex: _selectedIndex,
       onBottomNavTap: _onBottomNavTap,
-      walletCards: walletCards,
+      walletCards: _filteredCards,
       onCardTap: _onCardTap,
       onSortCards: _onSortCards,
       onAddCard: _onAddCard,
+      onSearchChanged: _onSearchChanged,
     );
   }
 }
