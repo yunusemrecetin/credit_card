@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class CardDetailsBottomSheet extends StatelessWidget {
   final Map<String, dynamic> card;
@@ -350,7 +351,13 @@ class CardDetailsBottomSheet extends StatelessWidget {
   }
 
   void _copyToClipboard(BuildContext context, String text) {
-    // In a real app, you would use Clipboard.setData(ClipboardData(text: text))
+    // Provide haptic feedback
+    HapticFeedback.lightImpact();
+    
+    // Copy to clipboard
+    Clipboard.setData(ClipboardData(text: text));
+    
+    // Show confirmation
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text('Copied: $text'),
