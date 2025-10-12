@@ -397,7 +397,7 @@ class _WalletPageTemplateState extends State<WalletPageTemplate> {
                                     shape: BoxShape.circle,
                                   ),
                                   child: Icon(
-                                    Icons.close,
+                                    Icons.search_off_outlined,
                                     color: Colors.white.withOpacity(0.8),
                                     size: 16,
                                   ),
