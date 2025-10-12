@@ -1,70 +1,126 @@
 import 'package:flutter/material.dart';
+import '../molecules/molecules.dart';
 import '../organisms/organisms.dart';
 
 class CardsPageTemplate extends StatelessWidget {
   final List<Map<String, dynamic>> cards;
   final Function(Map<String, dynamic>)? onCardTap;
   final VoidCallback? onAddCard;
+  final int selectedIndex;
+  final Function(int) onBottomNavTap;
 
   const CardsPageTemplate({
     super.key,
     required this.cards,
     this.onCardTap,
     this.onAddCard,
+    this.selectedIndex = 0,
+    required this.onBottomNavTap,
   });
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[50],
       appBar: AppBar(
-        title: const Text('My Cards'),
+        title: Text(_getAppBarTitle()),
         backgroundColor: Colors.white,
         foregroundColor: Colors.black,
         elevation: 0,
         actions: [
+          if (selectedIndex == 0) // Cards tab
+            IconButton(
+              icon: const Icon(Icons.add),
+              onPressed: onAddCard,
+            ),
           IconButton(
-            icon: const Icon(Icons.add),
-            onPressed: onAddCard,
+            icon: const Icon(Icons.notifications_outlined),
+            onPressed: () {
+              // Handle notifications
+            },
           ),
         ],
       ),
-      body: cards.isEmpty
-          ? const Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(
-                    Icons.credit_card_off,
-                    size: 64,
-                    color: Colors.grey,
-                  ),
-                  SizedBox(height: 16),
-                  Text(
-                    'No cards added yet',
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.grey,
-                    ),
-                  ),
-                  SizedBox(height: 8),
-                  Text(
-                    'Tap the + button to add your first card',
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: Colors.grey,
-                    ),
-                  ),
-                ],
-              ),
-            )
-          : CardList(
-              cards: cards,
-              onCardTap: onCardTap,
-            ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: onAddCard,
-        child: const Icon(Icons.add),
+      body: _buildBody(),
+      bottomNavigationBar: BottomNavigation(
+        selectedIndex: selectedIndex,
+        onTap: onBottomNavTap,
       ),
     );
+  }
+
+  String _getAppBarTitle() {
+    switch (selectedIndex) {
+      case 0:
+        return 'My Cards';
+      case 1:
+        return 'Wallet';
+      case 2:
+        return 'Profile';
+      default:
+        return 'My Cards';
+    }
+  }
+
+  Widget _buildBody() {
+    switch (selectedIndex) {
+      case 0:
+        // Cards tab
+        if (cards.isEmpty) {
+          return const Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  Icons.credit_card_off,
+                  size: 64,
+                  color: Colors.grey,
+                ),
+                SizedBox(height: 16),
+                Text(
+                  'No cards added yet',
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: Colors.grey,
+                  ),
+                ),
+                SizedBox(height: 8),
+                Text(
+                  'Tap the + button to add your first card',
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: Colors.grey,
+                  ),
+                ),
+              ],
+            ),
+          );
+        }
+        return CardList(
+          cards: cards,
+          onCardTap: onCardTap,
+        );
+      case 1:
+        // Wallet tab
+        return const Center(
+          child: Text(
+            'Wallet feature coming soon',
+            style: TextStyle(fontSize: 18),
+          ),
+        );
+      case 2:
+        // Profile tab
+        return const Center(
+          child: Text(
+            'Profile feature coming soon',
+            style: TextStyle(fontSize: 18),
+          ),
+        );
+      default:
+        return CardList(
+          cards: cards,
+          onCardTap: onCardTap,
+        );
+    }
   }
 }

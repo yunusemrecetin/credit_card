@@ -1,6 +1,7 @@
 import 'package:base_project/so_like_app.dart';
 import 'package:flutter/material.dart';
 import '../templates/wallet_page_template.dart';
+import '../organisms/organisms.dart';
 
 @RoutePage(name: "WalletPage")
 class WalletPage extends StatefulWidget {
@@ -162,11 +163,20 @@ class _WalletPageState extends State<WalletPage> {
   }
 
   void _onCardTap(Map<String, dynamic> card) {
-    // Handle card tap - could show card details
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text('${card['day']} ${card['date']} card tapped'),
-        backgroundColor: Colors.black87,
+    // Show card details bottom sheet with custom animation
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
+      elevation: 0,
+      builder: (context) => DraggableScrollableSheet(
+        initialChildSize: 0.85,
+        minChildSize: 0.5,
+        maxChildSize: 0.95,
+        builder: (context, scrollController) => CardDetailsBottomSheet(
+          card: card,
+          scrollController: scrollController,
+        ),
       ),
     );
   }

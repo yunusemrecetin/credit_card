@@ -1,6 +1,8 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:base_project/so_like_app.dart';
 import 'package:flutter/material.dart';
 import '../templates/templates.dart';
+import '../organisms/organisms.dart';
 
 @RoutePage(name: "CardsPage")
 class CardsPage extends StatefulWidget {
@@ -11,6 +13,7 @@ class CardsPage extends StatefulWidget {
 }
 
 class _CardsPageState extends State<CardsPage> {
+  int _selectedIndex = 0;
   List<Map<String, dynamic>> cards = [
     {
       'cardNumber': '4532123456789012',
@@ -41,11 +44,48 @@ class _CardsPageState extends State<CardsPage> {
     },
   ];
 
-  void _onCardTap(Map<String, dynamic> card) {
-    // Handle card tap - could show card details or toggle visibility
+  void _onBottomNavTap(int index) {
     setState(() {
-      card['isObscured'] = !card['isObscured'];
+      _selectedIndex = index;
     });
+
+    // Handle tab switching with auto_route navigation
+    switch (index) {
+      case 0:
+        // Cards tab - already on cards page
+        break;
+      case 1:
+        // Wallet tab - navigate to wallet page
+        context.router.pushPath('/wallet');
+        break;
+      case 2:
+        // Profile tab
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('Profile feature coming soon'),
+          ),
+        );
+        break;
+    }
+  }
+
+  void _onCardTap(Map<String, dynamic> card) {
+    // Show card details bottom sheet with custom animation
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
+      elevation: 0,
+      builder: (context) => DraggableScrollableSheet(
+        initialChildSize: 0.85,
+        minChildSize: 0.5,
+        maxChildSize: 0.95,
+        builder: (context, scrollController) => CardDetailsBottomSheet(
+          card: card,
+          scrollController: scrollController,
+        ),
+      ),
+    );
   }
 
   void _onAddCard() {
@@ -63,6 +103,8 @@ class _CardsPageState extends State<CardsPage> {
       cards: cards,
       onCardTap: _onCardTap,
       onAddCard: _onAddCard,
+      selectedIndex: _selectedIndex,
+      onBottomNavTap: _onBottomNavTap,
     );
   }
 }
