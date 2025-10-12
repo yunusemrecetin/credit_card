@@ -21,6 +21,7 @@ class _WalletCardStackState extends State<WalletCardStack>
   late AnimationController _listAnimationController;
   late List<AnimationController> _cardAnimationControllers;
   late List<Animation<double>> _cardAnimations;
+  late ScrollController _scrollController;
 
   @override
   void initState() {
@@ -29,6 +30,9 @@ class _WalletCardStackState extends State<WalletCardStack>
       duration: const Duration(milliseconds: 600),
       vsync: this,
     );
+    
+    // Initialize scroll controller
+    _scrollController = ScrollController();
     
     // Create individual animation controllers for each card
     _cardAnimationControllers = List.generate(
@@ -60,17 +64,20 @@ class _WalletCardStackState extends State<WalletCardStack>
   @override
   void dispose() {
     _listAnimationController.dispose();
+    _scrollController.dispose();
     for (var controller in _cardAnimationControllers) {
       controller.dispose();
     }
     super.dispose();
   }
+  
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 32), // pt-8 pb-20
       child: SingleChildScrollView(
+        controller: _scrollController,
         child: SizedBox(
           height: 200 + (widget.cards.length - 1) * 80.0, // Calculate total height for 40% spacing
           child: Stack(

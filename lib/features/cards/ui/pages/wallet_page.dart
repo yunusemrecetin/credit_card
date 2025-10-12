@@ -66,6 +66,60 @@ class _WalletPageState extends State<WalletPage> {
       'cardNumber': '4321',
       'hasNFC': true,
     },
+    {
+      'day': 'THU',
+      'date': '23',
+      'cardType': 'generic',
+      'backgroundColor': const Color(0xFFFFD700), // Yellow-orange gradient
+      'content': 'credit_card',
+      'cardNumber': '4321',
+      'hasNFC': true,
+    },
+    {
+      'day': 'THU',
+      'date': '23',
+      'cardType': 'generic',
+      'backgroundColor': const Color(0xFFFFD700), // Yellow-orange gradient
+      'content': 'credit_card',
+      'cardNumber': '4321',
+      'hasNFC': true,
+    },
+    {
+      'day': 'THU',
+      'date': '23',
+      'cardType': 'generic',
+      'backgroundColor': const Color(0xFFFFD700), // Yellow-orange gradient
+      'content': 'credit_card',
+      'cardNumber': '4321',
+      'hasNFC': true,
+    },
+    {
+      'day': 'THU',
+      'date': '23',
+      'cardType': 'generic',
+      'backgroundColor': const Color(0xFFFFD700), // Yellow-orange gradient
+      'content': 'credit_card',
+      'cardNumber': '4321',
+      'hasNFC': true,
+    },
+    {
+      'day': 'THU',
+      'date': '23',
+      'cardType': 'generic',
+      'backgroundColor': const Color(0xFFFFD700), // Yellow-orange gradient
+      'content': 'credit_card',
+      'cardNumber': '4321',
+      'hasNFC': true,
+    },
+    {
+      'day': 'THU',
+      'date': '23',
+      'cardType': 'generic',
+      'backgroundColor': const Color(0xFFFFD700), // Yellow-orange gradient
+      'content': 'credit_card',
+      'cardNumber': '4321',
+      'hasNFC': true,
+    },
   ];
 
   void _onBottomNavTap(int index) {
