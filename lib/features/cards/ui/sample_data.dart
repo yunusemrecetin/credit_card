@@ -139,6 +139,36 @@ List<Map<String, dynamic>> sampleWalletCards = [
     'hasNFC': true,
     // This card uses gradient instead of image (like the last card in HTML)
   },
+  {
+    'day': 'THU',
+    'date': '23',
+    'cardType': 'credit',
+    'backgroundColor': const Color(0xFFEAB308), // yellow-500
+    'content': 'credit_card',
+    'cardNumber': '4321',
+    'hasNFC': true,
+    // This card uses gradient instead of image (like the last card in HTML)
+  },
+  {
+    'day': 'THU',
+    'date': '23',
+    'cardType': 'credit',
+    'backgroundColor': const Color(0xFFEAB308), // yellow-500
+    'content': 'credit_card',
+    'cardNumber': '4321',
+    'hasNFC': true,
+    // This card uses gradient instead of image (like the last card in HTML)
+  },
+  {
+    'day': 'THU',
+    'date': '23',
+    'cardType': 'credit',
+    'backgroundColor': const Color(0xFFEAB308), // yellow-500
+    'content': 'credit_card',
+    'cardNumber': '4321',
+    'hasNFC': true,
+    // This card uses gradient instead of image (like the last card in HTML)
+  },
 ];
 
 // Usage example:
