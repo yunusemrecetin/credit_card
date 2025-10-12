@@ -226,8 +226,8 @@ class CardDetailsBottomSheet extends StatelessWidget {
                       );
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFF141414).withOpacity(0.2), // primary/20
-                      foregroundColor: Colors.white, // Same as wallet page
+                      backgroundColor: Colors.white, // Changed to white
+                      foregroundColor: const Color(0xFF141414), // Changed to black
                       elevation: 0,
                       padding: const EdgeInsets.symmetric(vertical: 12),
                       shape: RoundedRectangleBorder(
@@ -258,8 +258,8 @@ class CardDetailsBottomSheet extends StatelessWidget {
                       );
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFF141414), // primary
-                      foregroundColor: Colors.white, // Same as wallet page
+                      backgroundColor: Colors.white, // Changed to white
+                      foregroundColor: const Color(0xFF141414), // Changed to black
                       elevation: 0,
                       padding: const EdgeInsets.symmetric(vertical: 12),
                       shape: RoundedRectangleBorder(

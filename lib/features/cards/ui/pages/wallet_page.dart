@@ -23,6 +23,7 @@ class _WalletPageState extends State<WalletPage> {
       'backgroundColor': const Color(0xFF2D3748), // Dark slate gray
       'content': 'white_card',
       'text': '',
+      'bankName': 'Generic Bank',
     },
     {
       'day': 'MON',
@@ -49,6 +50,7 @@ class _WalletPageState extends State<WalletPage> {
       'backgroundColor': const Color(0xFFF7E7CE), // Light peach/beige
       'content': 'white_card',
       'text': 'NNJOLKADO',
+      'bankName': 'Custom Bank',
     },
     {
       'day': 'FRI',
@@ -57,6 +59,7 @@ class _WalletPageState extends State<WalletPage> {
       'backgroundColor': const Color(0xFFF8BBD9), // Light pink
       'content': 'credit_card',
       'hasChip': true,
+      'bankName': 'Pink Bank',
     },
     {
       'day': 'THU',
@@ -66,6 +69,7 @@ class _WalletPageState extends State<WalletPage> {
       'content': 'credit_card',
       'cardNumber': '4321',
       'hasNFC': true,
+      'bankName': 'Gold Bank',
     },
     {
       'day': 'THU',
@@ -75,6 +79,7 @@ class _WalletPageState extends State<WalletPage> {
       'content': 'credit_card',
       'cardNumber': '4321',
       'hasNFC': true,
+      'bankName': 'Premium Bank',
     },
     {
       'day': 'THU',
@@ -84,6 +89,7 @@ class _WalletPageState extends State<WalletPage> {
       'content': 'credit_card',
       'cardNumber': '4321',
       'hasNFC': true,
+      'bankName': 'Elite Bank',
     },
     {
       'day': 'THU',
@@ -93,6 +99,7 @@ class _WalletPageState extends State<WalletPage> {
       'content': 'credit_card',
       'cardNumber': '4321',
       'hasNFC': true,
+      'bankName': 'Royal Bank',
     },
     {
       'day': 'THU',
@@ -102,6 +109,7 @@ class _WalletPageState extends State<WalletPage> {
       'content': 'credit_card',
       'cardNumber': '4321',
       'hasNFC': true,
+      'bankName': 'Crown Bank',
     },
     {
       'day': 'THU',
@@ -111,6 +119,7 @@ class _WalletPageState extends State<WalletPage> {
       'content': 'credit_card',
       'cardNumber': '4321',
       'hasNFC': true,
+      'bankName': 'Imperial Bank',
     },
     {
       'day': 'THU',
@@ -120,6 +129,7 @@ class _WalletPageState extends State<WalletPage> {
       'content': 'credit_card',
       'cardNumber': '4321',
       'hasNFC': true,
+      'bankName': 'Noble Bank',
     },
   ];
 

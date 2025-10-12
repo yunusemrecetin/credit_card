@@ -89,6 +89,22 @@ class WalletCard extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
+                      // Bank name at the top
+                      if (bankName != null)
+                        Align(
+                          alignment: Alignment.topLeft,
+                          child: Text(
+                            bankName!,
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w600,
+                              fontFamily: 'Inter',
+                              letterSpacing: 1.2,
+                            ),
+                          ),
+                        ),
+                      
                       // Top row with spinner, date, and drag indicator
                       Row(
                         children: [
