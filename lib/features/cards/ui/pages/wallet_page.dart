@@ -191,11 +191,13 @@ class _WalletPageState extends State<WalletPage> {
   }
 
   void _onAddCard() {
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('Add card functionality'),
-        backgroundColor: Colors.black87,
-      ),
+    // Show add card bottom sheet
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
+      elevation: 0,
+      builder: (context) => const AddCardBottomSheet(),
     );
   }
 
