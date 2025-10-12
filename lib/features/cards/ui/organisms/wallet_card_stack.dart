@@ -18,6 +18,53 @@ class WalletCardStack extends StatefulWidget {
 class _WalletCardStackState extends State<WalletCardStack>
     with TickerProviderStateMixin {
   int? hoveredIndex;
+  late AnimationController _listAnimationController;
+  late List<AnimationController> _cardAnimationControllers;
+  late List<Animation<double>> _cardAnimations;
+
+  @override
+  void initState() {
+    super.initState();
+    _listAnimationController = AnimationController(
+      duration: const Duration(milliseconds: 600),
+      vsync: this,
+    );
+    
+    // Create individual animation controllers for each card
+    _cardAnimationControllers = List.generate(
+      widget.cards.length,
+      (index) => AnimationController(
+        duration: Duration(milliseconds: 1500 + (index * 100)), // Staggered animation
+        vsync: this,
+      ),
+    );
+    
+    // Create animations for each card
+    _cardAnimations = _cardAnimationControllers.map((controller) {
+      return Tween<double>(
+        begin: 0.0,
+        end: 1.0,
+      ).animate(CurvedAnimation(
+        parent: controller,
+        curve: Curves.easeOutBack,
+      ));
+    }).toList();
+    
+    // Start animations
+    _listAnimationController.forward();
+    for (var controller in _cardAnimationControllers) {
+      controller.forward();
+    }
+  }
+
+  @override
+  void dispose() {
+    _listAnimationController.dispose();
+    for (var controller in _cardAnimationControllers) {
+      controller.dispose();
+    }
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -55,28 +102,43 @@ class _WalletCardStackState extends State<WalletCardStack>
                 top: baseOffset + hoverOffset,
                 left: 0,
                 right: 0,
-                child: AnimatedContainer(
-                  duration: const Duration(milliseconds: 300),
-                  curve: Curves.easeInOut,
-                  child: MouseRegion(
-                    onEnter: (_) => setState(() => hoveredIndex = index),
-                    onExit: (_) => setState(() => hoveredIndex = null),
-                    child: WalletCard(
-                      day: card['day'],
-                      date: card['date'],
-                      cardType: card['cardType'],
-                      backgroundColor: card['backgroundColor'],
-                      content: card['content'],
-                      text: card['text'],
-                      bankName: card['bankName'],
-                      hasLogo: card['hasLogo'] ?? false,
-                      hasChip: card['hasChip'] ?? false,
-                      cardNumber: card['cardNumber'],
-                      hasNFC: card['hasNFC'] ?? true, // Default to true for HTML design
-                      cardImageUrl: card['cardImageUrl'],
-                      onTap: () => widget.onCardTap?.call(card),
-                    ),
-                  ),
+                child: AnimatedBuilder(
+                  animation: _cardAnimations[index],
+                  builder: (context, child) {
+                    final animationValue = _cardAnimations[index].value.clamp(0.0, 1.0);
+                    return Transform.scale(
+                      scale: animationValue,
+                      child: Transform.translate(
+                        offset: Offset(0, (1 - animationValue) * 50),
+                        child: Opacity(
+                          opacity: animationValue,
+                          child: AnimatedContainer(
+                            duration: const Duration(milliseconds: 300),
+                            curve: Curves.easeInOut,
+                            child: MouseRegion(
+                              onEnter: (_) => setState(() => hoveredIndex = index),
+                              onExit: (_) => setState(() => hoveredIndex = null),
+                              child: WalletCard(
+                                day: card['day'],
+                                date: card['date'],
+                                cardType: card['cardType'],
+                                backgroundColor: card['backgroundColor'],
+                                content: card['content'],
+                                text: card['text'],
+                                bankName: card['bankName'],
+                                hasLogo: card['hasLogo'] ?? false,
+                                hasChip: card['hasChip'] ?? false,
+                                cardNumber: card['cardNumber'],
+                                hasNFC: card['hasNFC'] ?? true, // Default to true for HTML design
+                                cardImageUrl: card['cardImageUrl'],
+                                onTap: () => widget.onCardTap?.call(card),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    );
+                  },
                 ),
               );
             }).toList(),
