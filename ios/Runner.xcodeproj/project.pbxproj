@@ -265,8 +265,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 97C147051CF9000F007C117D /* Build configuration list for PBXNativeTarget "Runner" */;
 			buildPhases = (
+				68ED404F24BAB0CD3C99A5A5 /* Firebase Setup */,
 				8735BCFC908A2432DA1309A4 /* [CP] Check Pods Manifest.lock */,
-				1D28F90F58C071CA95093D1F /* Firebase Setup */,
 				9740EEB61CF901F6004384FC /* Run Script */,
 				97C146EA1CF9000F007C117D /* Sources */,
 				97C146EB1CF9000F007C117D /* Frameworks */,
@@ -380,24 +380,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		1D28F90F58C071CA95093D1F /* Firebase Setup */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Firebase Setup";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if [ \"$CONFIGURATION\" == \"Debug-dev\" ] || [ \"$CONFIGURATION\" == \"Release-dev\" ]; then\n  cp Runner/dev/GoogleService-Info.plist Runner/GoogleService-Info.plist\nelif [ \"$CONFIGURATION\" == \"Debug-beta\" ] || [ \"$CONFIGURATION\" == \"Release-beta\" ]; then\n  cp Runner/beta/GoogleService-Info.plist Runner/GoogleService-Info.plist\nelif [ \"$CONFIGURATION\" == \"Debug-prod\" ] || [ \"$CONFIGURATION\" == \"Release-prod\" ]; then\n  cp Runner/prod/GoogleService-Info.plist Runner/GoogleService-Info.plist\nfi\n\n";
-		};
 		3B06AD1E1E4923F5004D2608 /* Thin Binary */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
@@ -413,6 +395,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" embed_and_thin";
+		};
+		68ED404F24BAB0CD3C99A5A5 /* Firebase Setup */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Firebase Setup";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(SRCROOT)/Runner/GoogleService-Info.plist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"$CONFIGURATION\" == \"Debug-dev\" ] || [ \"$CONFIGURATION\" == \"Release-dev\" ]; then\n  cp Runner/dev/GoogleService-Info.plist Runner/GoogleService-Info.plist\nelif [ \"$CONFIGURATION\" == \"Debug-beta\" ] || [ \"$CONFIGURATION\" == \"Release-beta\" ]; then\n  cp Runner/beta/GoogleService-Info.plist Runner/GoogleService-Info.plist\nelif [ \"$CONFIGURATION\" == \"Debug-prod\" ] || [ \"$CONFIGURATION\" == \"Release-prod\" ]; then\n  cp Runner/prod/GoogleService-Info.plist Runner/GoogleService-Info.plist\nfi\n\n";
 		};
 		8735BCFC908A2432DA1309A4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -641,73 +642,73 @@
 		};
 		41A02A2A2AD4C181009EB5A7 /* Debug-dev */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CD75246E9D907BA1CF83FF2 /* Pods-Runner.debug-dev.xcconfig */;
+			baseConfigurationReference = 1F3EBA37E18913FD3832A10C /* devDebug.xcconfig */;
 			buildSettings = {
-				PRODUCT_NAME = Runner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Debug-dev";
 		};
 		41A02A2B2AD4C181009EB5A7 /* Profile-dev */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AF78BB92DC97B1CEB46C83E0 /* Pods-Runner.profile-dev.xcconfig */;
+			baseConfigurationReference = BB3296D92F9DDA742DFCF90D /* devProfile.xcconfig */;
 			buildSettings = {
-				PRODUCT_NAME = Runner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Profile-dev";
 		};
 		41A02A2C2AD4C181009EB5A7 /* Release-dev */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 20E37E29956BC2AC7CC9A7C2 /* Pods-Runner.release-dev.xcconfig */;
+			baseConfigurationReference = D4B3CA6F00DC29E2827225B6 /* devRelease.xcconfig */;
 			buildSettings = {
-				PRODUCT_NAME = Runner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Release-dev";
 		};
 		41A02A2D2AD4C181009EB5A7 /* Debug-beta */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EFC98BEAFCDA274924C0801E /* Pods-Runner.debug-beta.xcconfig */;
+			baseConfigurationReference = DD0778C303603ECE7E44FD57 /* betaDebug.xcconfig */;
 			buildSettings = {
-				PRODUCT_NAME = Runner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Debug-beta";
 		};
 		41A02A2E2AD4C181009EB5A7 /* Profile-beta */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1441D1BE246E3880D0034F43 /* Pods-Runner.profile-beta.xcconfig */;
+			baseConfigurationReference = D99FF4305BB3C3F8859B5FA1 /* betaProfile.xcconfig */;
 			buildSettings = {
-				PRODUCT_NAME = Runner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Profile-beta";
 		};
 		41A02A2F2AD4C181009EB5A7 /* Release-beta */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D90A808F90FB224A3A0B64BE /* Pods-Runner.release-beta.xcconfig */;
+			baseConfigurationReference = B05E69FC26F6C16A98A50360 /* betaRelease.xcconfig */;
 			buildSettings = {
-				PRODUCT_NAME = Runner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Release-beta";
 		};
 		41A02A302AD4C181009EB5A7 /* Debug-prod */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0072BD45EDE0EF7F5594115F /* Pods-Runner.debug-prod.xcconfig */;
+			baseConfigurationReference = 628A6891D416E10FA7F063A3 /* prodDebug.xcconfig */;
 			buildSettings = {
-				PRODUCT_NAME = Runner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Debug-prod";
 		};
 		41A02A312AD4C181009EB5A7 /* Profile-prod */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E113C277565F1B5593FCC7D7 /* Pods-Runner.profile-prod.xcconfig */;
+			baseConfigurationReference = C590DC8C65D5F173232166F2 /* prodProfile.xcconfig */;
 			buildSettings = {
-				PRODUCT_NAME = Runner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Profile-prod";
 		};
 		41A02A322AD4C181009EB5A7 /* Release-prod */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1DB0FA40C1F20A5E2101263 /* Pods-Runner.release-prod.xcconfig */;
+			baseConfigurationReference = 6DF322E918D66FB99801CFAC /* prodRelease.xcconfig */;
 			buildSettings = {
-				PRODUCT_NAME = Runner;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = "Release-prod";
 		};
